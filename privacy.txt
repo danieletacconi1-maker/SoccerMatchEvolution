@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Legali e Privacy - Calcio Manageriale</title>
+    <style>
+        :root {
+            --primary-color: #2e7d32; /* Verde dinamico campo da calcio */
+            --text-color: #333333;
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .tab-btn {
+            background-color: var(--border-color);
+            color: #555;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active, .tab-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .content-section {
+            display: none;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #444;
+            margin-top: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        @media (max-width: 600px) {
+            .container { margin: 10px auto; padding: 10px; }
+            .nav-tabs { flex-direction: column; width: 100%; }
+            .tab-btn { width: 100%; text-align: center; }
+            .content-section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Gioco di Calcio Manageriale</h1>
+        <p>Centro Legale: Termini d'Uso, Privacy e Note sulle Licenze</p>
+    </header>
+
+    <!-- Menu di navigazione a schede Corretto ed Esteso -->
+    <div class="nav-tabs">
+        <button id="btn-termini" class="tab-btn active" onclick="switchTab('termini')">Termini e Condizioni</button>
+        <button id="btn-privacy" class="tab-btn" onclick="switchTab('privacy')">Privacy Policy</button>
+        <button id="btn-elimina" class="tab-btn" onclick="switchTab('elimina')" style="color: #d32f2f;">❌ Elimina Account</button>
+        <button id="btn-crediti" class="tab-btn" onclick="switchTab('crediti')">Crediti e Fonti (CC0)</button>
+        <button id="btn-versioni" class="tab-btn" onclick="switchTab('versioni')">Storico Versioni</button>
+        <button id="btn-supporto" class="tab-btn" onclick="switchTab('supporto')">Supporto Tester</button>
+        <button id="btn-noti" class="tab-btn" onclick="switchTab('noti')">Problemi Noti</button>
+    </div>
+
+    <!-- SEZIONE TERMINI E CONDIZIONI -->
+    <div id="termini" class="content-section active">
+        <h2>Regolamento Soccer Match Evolution</h2>
+        <h3>1. Account</h3>
+        <ul>
+            <li>Per utilizzare il gioco, l'Utente deve creare un account fornendo dati veritieri, accurati e aggiornati. L'uso di indirizzi email temporanei o falsi è vietato e può comportare la cancellazione immediata dell'account.</li>
+            <li>A ciascuna persona fisica è consentito creare e gestire un solo ed esclusivo account di gioco. È severamente vietato possedere squadre multiple. Qualora il Gestore rilevi più account riconducibili allo stesso utente (tramite controllo IP, ID dispositivo o schemi di gioco), si riserva il diritto di sospendere o eliminare tutti i profili coinvolti.</li>
+            <li>L'Utente è l'unico responsabile della segretezza della propria password e delle attività svolte tramite il proprio account. Il Gestore non sarà responsabile per accessi non autorizzati causati dalla negligenza dell'Utente. La vendita, la cessione o il prestito del proprio account a terzi sono tassativamente vietati.</li>
+            <li>L'Utente ha il diritto di richiedere la cancellazione definitiva del proprio account in qualsiasi momento attraverso le impostazioni dell'App o inviando un'email all'assistenza. La cancellazione comporta la perdita immediata e irreversibile di tutti i progressi, dei calciatori e della valuta virtuale, senza diritto a rimborsi.</li>
+            <li>Il Gestore si riserva il diritto di sospendere o chiudere l'account dell'Utente, a propria esclusiva discrezione e senza preavviso, in caso di violazione del presente Regolamento (es. imbrogli sul calciomercato, uso di bot, insulti in chat). In caso di ban definitivo, l'Utente perde ogni diritto di accesso al gioco e l'eventuale valuta reale spesa per gli acquisti in-app non verrà restituita.</li>
+            <li>L'account non è vendibile a terze parti, può essere trasferito solo in casi eccezionali sotto la supervisione della ProdTacGames.</li>
+        </ul>
+
+        <h3>2. Chat</h3>
+        <ul>
+            <li>Al momento non è prevista una chat pubblica o tra utenti, se verrà inserita tornate a leggere il regolamento che si aggiornerà in merito.</li>
+        </ul>
+
+        <h3>3. Acquisti in-app e Perdita del Diritto di Recesso</h3>
+        <ul>
+            <li><b>Natura dei beni consumabili:</b> Gli acquisti riguardano contenuti digitali (valuta virtuale, gemme, pacchetti) forniti immediatamente su supporto non materiale. Tali beni sono associati al profilo, non trasferibili e non convertibili in denaro.</li>
+            <li><b>Esclusione del diritto di recesso:</b> In conformità agli artt. 54-bis e 59 (lett. o) del Codice del Consumo, l'erogazione immediata comporta la <b>perdita definitiva del diritto di recesso</b>.</li>
+            <li><b>Consenso espresso:</b> Confermando l'acquisto, l'utente richiede l'erogazione immediata e accetta la perdita del diritto di ripensamento.</li>
+            <li><b>Gestione Store Terzi:</b> Le transazioni sono gestite da Apple App Store o Google Play Store; il Titolare non tratta dati finanziari.</li>
+            <li><b>Smarrimento:</b> La disinstallazione dell'App o la perdita delle credenziali comporta la perdita dei beni acquistati.</li>
+        </ul>
+
+        <h3>4. Utenti minorenni per acquisti in-app</h3>
+        <ul>
+            <li>L'utilizzo del Gioco e la creazione di un account sono consentiti ai minori solo previo consenso e sotto la diretta supervisione di un genitore o di chi ne esercita la responsabilità genitoriale.</li>
+            <li>Effettuando un acquisto all'interno dell'App (es. monete virtuali, pacchetti di calciatori), l'Utente dichiara e garantisce di essere maggiorenne o, se minorenne, di aver ottenuto l'esplicito consenso dei genitori o del tutore legale all'uso del metodo di pagamento prescelto. Il Gestore non effettua verifiche sulla titolarità delle carte di credito o dei conti di pagamento utilizzati.</li>
+            <li>Tutti i pagamenti vengono effettuati in modo sicuro dalle piattaforme di distribuzione terze (Apple App Store e Google Play Store). Qualsiasi contestazione relativa ad acquisti non autorizzati effettuati da minori dovrà essere indirizzata esclusivamente al rispettivo Store, secondo le loro politiche di rimborso. Il Gestore non ha il potere tecnico o legale di rimborsare direttamente transazioni gestite dagli Store.</li>
+            <li>Si invitano caldamente i genitori a configurare i sistemi di "Controllo Parentale" (Parental Control) messi a disposizione da Apple e Google sui dispositivi dei propri figli, i quali consentono di bloccare gli acquisti in-app o di richiedere un'approvazione obbligatoria per ogni transazione (es. funzionalità "Chiedi di acquistare").</li>
+        </ul>
+
+        <h3>5. Divieto di mercato nero</h3>
+        <ul>
+            <li>Al momento non è prevista lo scambio di giocatori tra utenti, se verrà inserita tornate a leggere il regolamento che si aggiornerà in merito.</li>
+        </ul>
+        
+        <h3>5-bis. Politica di Fairplay e Abbandono delle Partite (Rage Quit)</h3>
+		<ul>
+    		<li>Al fine di garantire un'esperienza di gioco leale, competitiva e rispettosa per tutta la community, il Gestore applica una rigida politica contro l'abbandono intenzionale e prematuro delle partite in corso.</li>
+    		<li>Qualora un Utente scelga di disconnettersi volontariamente o di forzare la chiusura dell'applicazione prima del fischio finale ufficiale di una partita (pratica nota come <i>Rage Quit</i>), il sistema registrerà il comportamento applicando un <b>malus immediato alla sua Reputazione in-game</b>.</li>
+    		<li>Il peggioramento dell'indice di Reputazione influirà negativamente sull'esperienza di gioco, comportando sanzioni progressive nelle meccaniche interne (es. accoppiamenti prioritari nel matchmaking con altri utenti con bassa reputazione o penalizzazioni sui punti classifica).</li>
+    		<li>Al contrario, gli Utenti virtuosi che dimostreranno sportività portando a termine regolarmente tutte le partite previste, senza registrare disconnessioni fraudolente, riceveranno un <b>premio speciale in valuta virtuale del gioco (Bonus Fairplay)</b> erogato automaticamente alla conclusione di ogni stagione calcistica.</li>
+		</ul>
+
+        <h3>6. Protezione del copyright</h3>
+		<ul>
+    		<li>Il cambio delle immagini è attualmente preimpostato. Qualora in futuro vi sia la possibilità di inserire un logo personalizzato, è severamente vietato caricare loghi ufficiali di squadre reali o foto di calciatori se non si è in possesso di una licenza atta a farlo.</li>
+    		<li>Nel caso di violazione del copyright da parte dell'utente, la responsabilità legale ricade interamente sull'utente stesso.</li>
+		</ul>
+
+        <h3>7. Disponibilità del Servizio e Limitazione di Responsabilità</h3>
+		<ul>
+    		<li>L'App e tutti i servizi di gioco correlati vengono forniti "così come sono" e "secondo disponibilità". Il Gestore non garantisce che il gioco sia sempre accessibile, privo di interruzioni, sicuro o privo di errori o bug informatici.</li>
+    		<li>Il Gestore si riserva il diritto di sospendere o limitare l'accesso ai server di gioco per eseguire interventi di manutenzione (ordinaria o straordinaria), aggiornamenti tecnici o riparazioni di emergenza. L'Utente accetta che tali interruzioni possano verificarsi in qualsiasi momento e senza preavviso.</li>
+    		<li>Il Gestore non potrà in alcun caso essere ritenuto responsabile per qualsiasi danno, perdita di dati, di risorse virtuali o di opportunità di gioco derivanti da malfunzionamenti del server.</li>
+		</ul>
+
+        <h3>8. Proprietà intellettuale e risorse terze</h3>
+        <ul>
+            <li>Tutti i diritti di proprietà intellettuale sull'App, sul codice sorgente, sulle meccaniche di gioco, sulla struttura dei database e sui testi sono di proprietà exclusiv del Gestore.</li>
+    		<li>L'App potrebbe utilizzare elementi grafici, icone, sfondi, effetti sonori o colonne sonore rilasciati sotto licenza Creative Commons 0 (CC0) o di pubblico dominio.</li>
+        </ul>
+        
+        <h3>9. Autenticazione tramite Sistemi Terzi Certificati</h3>
+		<ul>
+    		<li>Per agevolare la registrazione e garantire la massima sicurezza, l'App utilizza sistemi di autenticazione esterni certificati forniti da terze parti ("Sign in with Apple", "Google Sign-In"). Il Gestore non raccoglie e non memorizza le password personali.</li>
+		</ul>
+
+        <h3>10. Cancellazione volontaria dell'account e diritti GDPR</h3>
+		<ul>
+    		<li>L'Utente ha il diritto di richiedere la chiusura del proprio account e l'eliminazione dei propri dati personali in qualsiasi momento. La richiesta può essere effettuata tramite l'apposita funzione "Elimina Account" o scrivendo a danieletacconi1@gmail.com.</li>
+		</ul>
+    </div>
+
+    <div id="privacy" class="content-section">
+        <h2>Informativa sulla Privacy (Privacy Policy)</h2>
+        <p><em>Ai sensi dell'art. 13 del Regolamento UE 2016/679 (GDPR)</em></p>
+        
+        <h2>1. Titolare del Trattamento</h2>
+        <p>Il Titolare del trattamento dei dati personali è: <strong>Daniele Tacconi</strong>.<br>Email di contatto: <strong>danieletacconi1@gmail.com</strong></p>
+
+        <h2>2. Tipologia di Dati Raccolti</h2>
+	    <ul>
+        	<li><b>Dati di Autenticazione:</b> Email, password crittografata gestiti tramite <i>Firebase Authentication</i>.</li>
+        	<li><b>Dati di Gioco:</b> Nickname, squadra, calciatori salvati su <i>Cloud Firestore</i>.</li>
+	    </ul>
+    </div>
+
+    <div id="elimina" class="content-section">
+        <h2>Richiesta di Eliminazione Account e Dati (GDPR)</h2>
+        <p>In conformità con le norme sulla sicurezza dei dati di Google Play, puoi richiedere la cancellazione totale e permanente del tuo account e di tutti i dati associati al gioco <strong>Calcio Manageriale / Soccer Match Evolution</strong>.</p>
+        <p>Per completare la richiesta di cancellazione dei tuoi dati ed esercitare il diritto all'oblio, invia una comunicazione diretta all'indirizzo email del nostro supporto:</p>
+        
+        <p style="font-size: 1.15em; font-weight: bold; background: #fff3e0; border-left: 5px solid #ff9800; padding: 15px; border-radius: 4px;">
+            📧 Email di supporto: <a href="mailto:danieletacconi1@gmail.com">danieletacconi1@gmail.com</a>
+        </p>
+        
+        <p><strong>Cosa verrà rimosso?</strong> La rimozione comporta l'eliminazione definitiva del profilo di gioco, della squadra gestita, dei calciatori sbloccati e dell'eventuale valuta virtuale residua. I dati verranno eliminati permanentemente dai server Firebase e dal database entro 30 giorni dalla richiesta.</p>
+    </div>
+
+    <div id="crediti" class="content-section">
+        <h2>Crediti e Fonti Terze (Licenze)</h2>
+        <p>Questo gioco è stato sviluppato nel rispetto della proprietà intellettuale.</p>
+        <h3>Tecnologia e Motore</h3>
+        <ul>
+            <li><strong>Unity Engine:</strong> Marchio registrato di Unity Technologies.</li>
+            <li><strong>Database & Auth:</strong> Google Firebase e Cloud Firestore.</li>
+        </ul>
+    </div>
+    
+    <div id="versioni" class="content-section">
+        <h2>Patch Notes & Aggiornamenti</h2>
+        <h3>Versione 1.0.8 (Iniziale)</h3>
+        <ul>
+            <li>Rilascio ufficiale del gioco su piattaforma mobile.</li>
+        </ul>
+    </div>
+
+    <div id="supporto" class="content-section">
+        <h2>Modulo Segnalazioni SME</h2>
+        <p>Invia un report direttamente al database.</p>
+        <form id="supportForm" style="margin-top: 20px;">
+            <label style="font-weight:bold; display:block; margin-bottom:5px;" for="categoria">Categoria:</label>
+            <select id="categoria" required style="width:100%; padding:10px; margin-bottom:15px; border:1px solid var(--border-color); border-radius:6px;">
+                <option value="BugReport">Segnalazione Bug (Errore)</option>
+                <option value="AccountIssue">Problema con l'Account / Salvataggio</option>
+                <option value="Feedback">Suggerimento / Bilanciamento</option>
+                <option value="Altro">Altra richiesta</option>
+            </select>
+
+            <label style="font-weight:bold; display:block; margin-bottom:5px;" for="messaggio">Messaggio:</label>
+            <textarea id="messaggio" placeholder="Descrivi qui i dettagli del problema riscontrato..." required style="width:100%; padding:10px; height:120px; margin-bottom:15px; border:1px solid var(--border-color); border-radius:6px; box-sizing:border-box; resize:vertical;"></textarea>
+            <button type="submit" id="submitBtn" style="width:100%; background-color:var(--primary-color); color:white; border:none; padding:12px; font-size:16px; font-weight:bold; border-radius:6px; cursor:pointer;">Invia Segnalazione</button>
+        </form>
+        <div id="statusBox" style="margin-top:15px; padding:10px; border-radius:6px; text-align:center; display:none; font-weight:bold;"></div>
+    </div>
+
+    <div id="noti" class="content-section">
+        <h2>Stato dei Bug e Problemi Noti</h2>
+        <div id="listaBugNoti" style="margin-top: 20px;">Caricamento dei problemi noti in corso...</div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Daniele Tacconi. Tutti i diritti riservati.</p>
+        <p>
+            <a href="#termini" onclick="switchTab('termini')">Termini e Condizioni</a> | 
+            <a href="#privacy" onclick="switchTab('privacy')">Informativa sulla Privacy</a> | 
+            <a href="#elimina" onclick="switchTab('elimina')">Elimina Account</a> | 
+            <a href="#crediti" onclick="switchTab('crediti')">Crediti e Licenze</a> |
+            <a href="#versioni" onclick="switchTab('versioni')">Versioni</a> |
+            <a href="#supporto" onclick="switchTab('supporto')">Supporto</a> |
+            <a href="#noti" onclick="switchTab('noti')">Problemi noti</a>
+        </p>
+    </footer>
+</div>
+
+<script>
+    const bypassIdPerTest = true; 
+    let idUtenteEstratto = "";      
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const idIdentificato = urlParams.get('id') ? urlParams.get('id').trim() : '';
+
+    if (idIdentificato) {
+        idUtenteEstratto = idIdentificato;
+        const urlPulito = window.location.protocol + "//" + window.location.host + window.location.pathname + window.location.hash;
+        window.history.replaceState({ path: urlPulito }, '', urlPulito);
+    } else if (bypassIdPerTest === true) {
+        idUtenteEstratto = "TEST_LOCALE";
+    }
+
+    function switchTab(tabId) {
+        const targetSection = document.getElementById(tabId);
+        if (!targetSection) return;
+
+        window.location.hash = tabId;
+
+        const sections = document.querySelectorAll('.content-section');
+        sections.forEach(section => section.classList.remove('active'));
+
+        const buttons = document.querySelectorAll('.tab-btn');
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        targetSection.classList.add('active');
+
+        const activeBtn = document.getElementById('btn-' + tabId);
+        if (activeBtn) activeBtn.classList.add('active');
+
+        if (tabId === 'noti') {
+            caricaProblemiNotiPubblici();
+        }
+    }
+
+    function gestisciAncoraURL() {
+        if (window.location.hash) {
+            const targetTab = window.location.hash.substring(1);
+            if (document.getElementById(targetTab)) {
+                switchTab(targetTab);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    async function caricaProblemiNotiPubblici() {
+        const container = document.getElementById("listaBugNoti");
+        if (!container) return;
+
+        try {
+            const response = await fetch("segnalazioni.json?t=" + new Date().getTime(), {
+                cache: "no-store",
+                headers: {
+                    "Cache-Control": "no-cache, no-store, must-revalidate",
+                    "Pragma": "no-cache"
+                }
+            });
+            if (!response.ok) throw new Error("File non trovato");
+
+            const segnalazioni = await response.json();
+            const listaSms = Object.values(segnalazioni);
+            listaSms.sort((a, b) => new Date(b.dataInvio) - new Date(a.dataInvio));
+
+            if (listaSms.length === 0) {
+                container.innerHTML = "<p style='color:#2e7d32;'><b>Nessun bug critico rilevato! Il gioco è stabile.</b></p>";
+                return;
+            }
+
+            let htmlIniezione = "";
+            listaSms.forEach((item) => {
+                let coloreStato = item.stato === "Risolto" ? "#2e7d32" : "#ff9800";
+                let categoriaUmana = "Segnalazione Generale";
+                if (item.categoria === "BugReport") categoriaUmana = "Bug Riscontrato";
+                if (item.categoria === "AccountIssue") categoriaUmana = "Problema di Accesso / Salvataggio";
+                if (item.categoria === "Feedback") categoriaUmana = "Suggerimento Tester";
+
+                htmlIniezione += `
+                    <div style="padding:15px; margin-bottom:12px; background:#f5f5f5; border-left:5px solid ${coloreStato}; border-radius:6px; color:#333;">
+                        <h4 style="margin:0 0 5px 0; color:var(--primary-color); font-size:1.1em;">${categoriaUmana}</h4>
+                        <p style="margin:5px 0 10px 0; font-size:0.95em; white-space: pre-wrap;">${item.messaggio}</p>
+                        <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.8em; color:#666; border-top:1px solid #e0e0e0; padding-top:8px;">
+                            <span>Data: ${new Date(item.dataInvio).toLocaleString('it-IT')}</span>
+                            <span style="font-weight:bold; color:${coloreStato}; text-transform:uppercase;">Stato: ${item.stato || 'In attesa'}</span>
+                        </div>
+                    </div>`;
+            });
+            container.innerHTML = htmlIniezione;
+        } catch (error) {
+            container.innerHTML = "<p style='color:#2e7d32;'><b>Nessun bug critico rilevato! Il gioco è stabile.</b></p>";
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.getElementById("supportForm");
+        if (!form) return;
+
+        const submitBtn = document.getElementById("submitBtn");
+        const statusBox = document.getElementById("statusBox");
+        let isSubmitting = false;
+
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            if (isSubmitting) return;
+
+            if (!idUtenteEstratto) {
+                statusBox.innerText = "Errore: Impossibile identificare l'utente dal gioco.";
+                statusBox.style.color = "#d32f2f";
+                statusBox.style.backgroundColor = "#ffebee";
+                statusBox.style.border = "1px solid #d32f2f";
+                statusBox.style.display = "block";
+                return;
+            }
+
+            isSubmitting = true;
+            submitBtn.disabled = true;
+            submitBtn.innerText = "Salvataggio in corso...";
+
+            const datiForm = {
+                userId: idUtenteEstratto, 
+                categoria: document.getElementById("categoria").value,
+                messaggio: document.getElementById("messaggio").value.trim()
+            };
+
+            fetch("salva_segnalazione.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(datiForm)
+            })
+            .then(r => r.json())
+            .then(data => {
+                statusBox.style.display = "block";
+                if(data.success) {
+                    statusBox.innerText = "Segnalazione salvata con successo sul server!";
+                    statusBox.style.color = "#2e7d32";
+                    statusBox.style.backgroundColor = "#e8f5e9";
+                    statusBox.style.border = "1px solid #2e7d32";
+                    form.reset();
+                } else {
+                    statusBox.innerText = "Errore durante il salvataggio: " + (data.error || "Riprova.");
+                    statusBox.style.color = "#d32f2f";
+                    statusBox.style.backgroundColor = "#ffebee";
+                    statusBox.style.border = "1px solid #d32f2f";
+                }
+            })
+            .catch(err => {
+                statusBox.innerText = "Errore di connessione al server.";
+                statusBox.style.color = "#d32f2f";
+                statusBox.style.backgroundColor = "#ffebee";
+                statusBox.style.border = "1px solid #d32f2f";
+                statusBox.style.display = "block";
+            })
+            .finally(() => {
+                isSubmitting = false;
+                submitBtn.disabled = false;
+                submitBtn.innerText = "Invia Segnalazione";
+            });
+        });
+
+        gestisciAncoraURL();
+    });
+
+    window.addEventListener('hashchange', gestisciAncoraURL);
+</script>
+</body>
+</html>
